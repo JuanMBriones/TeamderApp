@@ -1,0 +1,7 @@
+{
+  "name": "teamderApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
