@@ -5,5 +5,32 @@
 </ion-header>
 
 <ion-content>
+  <div class="ion-padding-top ion-text-center">
+    <div class="login-logo">
+      <img src="assets/img/login.png" alt="Login logo">
+    </div>
+
+    <!--<form #loginForm="ngForm" novalidate>-->
+    <form>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked" color="primary">Username</ion-label>
+          <ion-input><!-- [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
+            required>-->
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked" color="primary">Password</ion-label>
+          <ion-input><!--[(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>-->
+          </ion-input>
+        </ion-item>
+        <ion-button (click)="onLogin()" expand="block">Login</ion-button>
   
+
+    
+      </ion-list>
+    </form>
+  </div>
+
 </ion-content>
