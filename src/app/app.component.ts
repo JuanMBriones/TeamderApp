@@ -14,34 +14,34 @@ export class AppComponent implements OnInit {
   public appPages = [
     {
       title: 'Teams',
-      url: '/folder/Teams',
+      url: 'teams',
       icon: 'people'
     },
     {
       title: 'Match',
-      url: '/folder/Match',
+      url: 'match',
       icon: 'flame'
     },
     {
       title: 'Meetings',
-      url: '/folder/Meetings',
+      url: 'meetings',
       icon: 'calendar'
     }
   ];
   public userPages = [
     {
       title: 'Profile',
-      url: '/folder/Profile',
+      url: 'profile',
       icon: 'person-circle'
     },
     {
       title: 'Login',
-      url: '/folder/Login',
+      url: 'login',
       icon: 'finger-print'
     },
     {
       title: 'Logout',
-      url: '/folder/Logout',
+      url: 'logout',
       icon: 'finger-print'
     }
   ];
