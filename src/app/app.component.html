@@ -1,6 +1,7 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu contentId="main-content" >
+      
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Teamder</ion-list-header>
@@ -13,7 +14,7 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
-        <ion-list id="inbox-list">
+        <ion-list id="inbox-list2">
           <ion-note>Level up your profile!</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let f of userPages; let j = index">

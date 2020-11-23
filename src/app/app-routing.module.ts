@@ -24,10 +24,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/match/match.module').then( m => m.MatchPageModule)
   },
   {
-    path: 'meetings',
-    loadChildren: () => import('./pages/meetings/meetings.module').then( m => m.MeetingsPageModule)
-  },
-  {
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },

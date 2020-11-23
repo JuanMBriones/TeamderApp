@@ -21,11 +21,6 @@ export class AppComponent implements OnInit {
       title: 'Match',
       url: 'match',
       icon: 'flame'
-    },
-    {
-      title: 'Meetings',
-      url: 'meetings',
-      icon: 'calendar'
     }
   ];
   public userPages = [
