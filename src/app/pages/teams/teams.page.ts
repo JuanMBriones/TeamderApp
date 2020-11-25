@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConferenceData } from '../../providers/conference-data';
 
 @Component({
   selector: 'app-teams',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamsPage implements OnInit {
 
-  constructor() { }
-
   ngOnInit() {
+  }
+  speakers: any[] = [];
+
+  constructor(public confData: ConferenceData) {}
+
+  ionViewDidEnter() {
+    this.confData.getSpeakers().subscribe((speakers: any[]) => {
+      this.speakers = speakers;
+    });
   }
 
 }
