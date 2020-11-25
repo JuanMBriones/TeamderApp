@@ -55,7 +55,17 @@ export class ConferenceData {
 
 
 
-  
+  getTeams() {
+    return this.load().pipe(
+      map((data: any) => {
+        return data.teams.sort((a: any, b: any) => {
+          const aName = a.name.split(' ').pop();
+          const bName = b.name.split(' ').pop();
+          return aName.localeCompare(bName);
+        });
+      })
+    );
+  }
 
   getSpeakers() {
     return this.load().pipe(

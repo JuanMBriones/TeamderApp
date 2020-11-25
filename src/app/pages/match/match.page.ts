@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConferenceData } from '../../providers/conference-data';
 
 @Component({
   selector: 'app-match',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatchPage implements OnInit {
 
-  constructor() { }
-
   ngOnInit() {
   }
 
+  speakers: any[] = [];
+
+  constructor(public confData: ConferenceData) {}
+
+  ionViewDidEnter() {
+    // getSpeakers
+    this.confData.getSpeakers().subscribe((speakers: any[]) => {
+      this.speakers = speakers;
+    });
+  }
 }
+

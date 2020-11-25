@@ -245,6 +245,26 @@
       }
     ],
   
+    "teams": [
+        {
+          "name": "Red Team",
+          "profilePic": "/assets/img/speakers/bear.jpg",
+          "id": "1",
+          "members": [
+            {
+              "name": "Burt Bear",
+              "profilePic": "/assets/img/speakers/bear.jpg",
+              "id": "1"
+            },
+            {
+              "name": "Charlie Cheetah",
+              "profilePic": "/assets/img/speakers/cheetah.jpg",
+              "id": "2"
+            }
+          ]
+        }
+    ],
+
     "speakers": [
       {
         "name": "Burt Bear",

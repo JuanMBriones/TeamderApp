@@ -15,7 +15,8 @@ export class TeamsPage implements OnInit {
   constructor(public confData: ConferenceData) {}
 
   ionViewDidEnter() {
-    this.confData.getSpeakers().subscribe((speakers: any[]) => {
+    // getSpeakers
+    this.confData.getTeams().subscribe((speakers: any[]) => {
       this.speakers = speakers;
     });
   }
