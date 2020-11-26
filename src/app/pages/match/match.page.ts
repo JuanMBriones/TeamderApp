@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 import { ConferenceData } from '../../providers/conference-data';
+import { TeamMembersPage } from 'src/app/modals/team-members/team-members.page';
+import { ProfileMemberPage } from 'src/app/modals/profile-member/profile-member.page';
 
 @Component({
   selector: 'app-match',
@@ -13,7 +16,7 @@ export class MatchPage implements OnInit {
 
   speakers: any[] = [];
 
-  constructor(public confData: ConferenceData) {}
+  constructor(public confData: ConferenceData, private modalCtrl: ModalController) {}
 
   ionViewDidEnter() {
     // getSpeakers
@@ -21,5 +24,13 @@ export class MatchPage implements OnInit {
       this.speakers = speakers;
     });
   }
-}
 
+
+  async openModalProfile() {
+    const modal = this.modalCtrl.create({
+      component: ProfileMemberPage
+    });
+
+    (await modal).present();
+  }
+}

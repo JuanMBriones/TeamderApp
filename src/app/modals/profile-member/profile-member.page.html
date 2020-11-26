@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Member</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding-top ion-text-center">
+    <!--<div *ngIf="username" class="ion-padding-top ion-text-center">-->
+    <img src="https://www.gravatar.com/avatar?d=mm&s=140" alt="avatar">
+    <!--<h2>{{username}}</h2>-->
+    <h2>{{username}}</h2>
+
+    <ion-list inset>
+      <ion-item (click)="changeSkills()">Skills</ion-item>
+      
+        <ion-chip color="primary">
+          <ion-label>I understood Evangelion</ion-label>
+        </ion-chip>
+        <ion-chip color="secondary">
+          <ion-label>I've never played with Rugal</ion-label>
+        </ion-chip>
+        <ion-chip color="tertiary">
+          <ion-label>Linux</ion-label>
+        </ion-chip>
+        <ion-chip color="success">
+          <ion-label>Docker</ion-label>
+        </ion-chip>
+        <ion-chip color="warning">
+          <ion-label>Github</ion-label>
+        </ion-chip>
+        <ion-chip color="danger">
+          <ion-label>Basically a GOD</ion-label>
+        </ion-chip>
+    
+        <ion-chip outline color="primary">
+          <ion-label>innovation</ion-label>
+        </ion-chip>
+        <ion-chip outline color="secondary">
+          <ion-label>Entrepenurship</ion-label>
+        </ion-chip>
+        <ion-chip outline color="tertiary">
+          <ion-label>Team management</ion-label>
+        </ion-chip>
+        <ion-chip outline color="success">
+          <ion-label>Leadership</ion-label>
+        </ion-chip>
+        <ion-chip outline color="warning">
+          <ion-label>Pyhton</ion-label>
+        </ion-chip>
+        <ion-chip outline color="danger">
+          <ion-label>C++</ion-label>
+        </ion-chip>
+     
+        <ion-chip outline color="primary">
+          <ion-icon name="pin"></ion-icon>
+          <ion-label>Madison</ion-label>
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-chip>
+        <ion-chip outline color="secondary">
+          <ion-icon name="wine"></ion-icon>
+          <ion-label>Nightlife</ion-label>
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-chip>
+        <ion-chip outline color="tertiary">
+          <ion-icon name="restaurant"></ion-icon>
+          <ion-label>Italian food</ion-label>
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-chip>
+        <ion-chip outline color="dark">
+          <ion-icon name="videocam"></ion-icon>
+          <ion-label>Entertainment</ion-label>
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-chip>
+    </ion-list>
+      <ion-item>
+        <ion-input position="stacked" placeholder="   Your skill" type="text"></ion-input>
+        <ion-button color="danger" expand="full" shape="round" (click)="addSkill()">Invite!</ion-button>
+      </ion-item>
+
+    </div>
+</ion-content>
+

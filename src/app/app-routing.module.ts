@@ -30,6 +30,14 @@ const routes: Routes = [
   {
     path: 'logout',
     loadChildren: () => import('./pages/logout/logout.module').then( m => m.LogoutPageModule)
+  },
+  {
+    path: 'team-members',
+    loadChildren: () => import('./modals/team-members/team-members.module').then( m => m.TeamMembersPageModule)
+  },
+  {
+    path: 'profile-member',
+    loadChildren: () => import('./modals/profile-member/profile-member.module').then( m => m.ProfileMemberPageModule)
   }
 ];
 
