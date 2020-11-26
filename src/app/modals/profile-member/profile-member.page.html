@@ -74,7 +74,10 @@
         </ion-chip>
     </ion-list>
       <ion-item>
-        <ion-input position="stacked" placeholder="   Your skill" type="text"></ion-input>
+        <ion-label>Invite to team</ion-label>
+        <ion-select ok-text="Invite" cancel-text="Cancel">
+            <ion-select-option value="Red Team">Red Team</ion-select-option>
+        </ion-select>
         <ion-button color="danger" expand="full" shape="round" (click)="addSkill()">Invite!</ion-button>
       </ion-item>
 
