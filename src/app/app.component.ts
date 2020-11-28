@@ -3,11 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss']
+  styleUrls: ['app.component.scss'],
+  providers: [DataService],
 })
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
@@ -45,7 +47,8 @@ export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private dataSvc: DataService
   ) {
     this.initializeApp();
   }
@@ -58,6 +61,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.dataSvc.getAll().subscribe((res) => {console.log('Res', res)});
     const path = window.location.pathname.split('folder/')[1];
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
