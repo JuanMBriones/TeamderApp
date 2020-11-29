@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConferenceData } from 'src/app/providers/conference-data';
-
+import {DataService} from '../../data.service';
 
 @Component({
   selector: 'app-team-members',
@@ -15,13 +15,14 @@ export class TeamMembersPage implements OnInit {
 
   speakers: any[] = [];
 
-  constructor(public confData: ConferenceData) {}
+  constructor(public confData: ConferenceData, private dataService: DataService) {}
 
   ionViewDidEnter() {
     // getSpeakers
     this.confData.getSpeakers().subscribe((speakers: any[]) => {
       this.speakers = speakers;
     });
+
   }
 
 }

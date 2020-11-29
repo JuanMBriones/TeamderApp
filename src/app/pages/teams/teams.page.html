@@ -24,8 +24,8 @@
                 <img [src]="speaker.profilePic" [alt]="speaker.name + ' profile picture'">
               </ion-avatar>
               <ion-label>
-                <h2>{{speaker.name}}</h2>
-                <p>{{speaker.title}}</p>
+                <h2>{{speaker.attributes.teamName}}</h2>
+                
               </ion-label>
             </ion-item>
           </ion-card-header>
@@ -40,7 +40,7 @@
 
               <ion-item detail="false" button (click)="alert('x')">
                 <ion-label>
-                  <h3>Manage {{speaker.name}}</h3>
+                  <h3>Manage {{speaker.attributes.teamName}}</h3>
                 </ion-label>
               </ion-item>
             </ion-list>

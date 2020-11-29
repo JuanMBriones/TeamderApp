@@ -7,6 +7,7 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataService {
   private apiKey = 'http://localhost:8000/api/';
   constructor(private http: HttpClient) { }
@@ -26,6 +27,11 @@ export class DataService {
   getAll(): Observable<any>{
     return this.http.get<any>(this.apiKey+'equipos');
   }
+
+  allTeams(): Observable<Teams[]> {
+    return this.http.get<TeamsList>(this.apiKey+'equipos').pipe(map(myTeams => myTeams.data));
+  }
+
 
   //this.dataSvc.getAll().subscribe((res) => {console.log('Res', res)});
 
@@ -85,6 +91,14 @@ export class DataService {
   }*/
 }
 
+interface Teams {
+  id: number;
+  name: string;
+}
+
+interface TeamsList {
+  data: Teams[];
+}
   
 
   
